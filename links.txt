@@ -1,0 +1,2 @@
+https://en.wikipedia.org/wiki/OBD-II_PIDs
+https://github.com/OBDb/SAEJ1979

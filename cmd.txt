@@ -1,0 +1,3 @@
+stty -F /dev/ttyUSB0 -a
+lsof - list open files
+fuser - identify processes using files or sockets

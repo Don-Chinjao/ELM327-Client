@@ -1,0 +1,56 @@
+Raw Response:
+41 54 45 30 0d 4f 4b 0d 0d 3e 
+Ascii Response:
+>KE0
+>ATZ 
+Raw Response:
+0d 0d 45 4c 4d 33 32 37 20 76 31 2e 35 0d 0d 3e 
+Ascii Response:
+>LM327 v1.5
+>ATI
+Raw Response:
+41 54 49 0d 45 4c 4d 33 32 37 20 76 31 2e 35 0d 0d 3e 
+Ascii Response:
+>LM327 v1.5
+>ATDP
+Raw Response:
+41 54 44 50 0d 49 53 4f 20 31 35 37 36 35 2d 34 20 28 43 41 4e 20 31 31 2f 35 30 30 29 0d 0d 3e 
+Ascii Response:
+>SO 15765-4 (CAN 11/500)
+>ATSP0
+Raw Response:
+41 54 53 50 30 0d 4f 4b 0d 0d 3e 
+Ascii Response:
+>KSP0
+>ATDP
+Raw Response:
+41 54 44 50 0d 41 55 54 4f 
+Ascii Response:
+AUTO
+>010C
+Raw Response:
+30 31 30 43 0d 53 45 41 52 43 48 49 4e 47 2e 2e 2e 0d 
+Ascii Response:
+SEARCHING...
+>test
+Raw Response:
+34 31 20 30 43 20 30 43 20 45 43 20 0d 0d 3e 
+Ascii Response:
+>1 0C 0C EC 
+>010D
+Raw Response:
+74 65 73 74 0d 3f 0d 0d 3e 
+Ascii Response:
+>est
+>
+Raw Response:
+30 31 30 44 0d 34 31 20 30 44 20 30 30 20 0d 0d 3e 
+Ascii Response:
+>1 0D 00 
+>0100
+Raw Response:
+0d 30 31 30 30 0d 34 31 20 30 30 20 39 38 20 33 46 20 38 30 20 31 31 20 0d 0d 3e 
+Ascii Response:
+>1 00 98 3F 80 11 
+>
+
