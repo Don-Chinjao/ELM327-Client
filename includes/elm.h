@@ -16,7 +16,17 @@
 # include <sys/select.h>
 # include <stdint.h>
 
-extern char	elm_response[1024];
+//extern char	elm_response[1024];
+
+typedef	struct s_elm_response t_elm_response;
+
+extern t_elm_response	elm_response;
+
+typedef	struct s_elm_response
+{
+	char	raw[1024];
+	char	lines[256][1024];
+}		t_elm_response;
 
 typedef	enum e_obd_error
 {
@@ -42,7 +52,7 @@ typedef	struct s_obd_response
 	size_t	len;
 }		t_obd_response;
 
-char	**split_response(char *response, char *charset);
+char	**split_response(char *response, char *charset, char tokens[256][1024]);
 
 int	elm_send(int fd, char const *cmd);
 int	elm_read_response(int fd);

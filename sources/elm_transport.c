@@ -25,7 +25,7 @@ int	elm_read_response(int fd)
 	total = 0;
 	start = time(NULL);
 	bzero(buffer, 1024);
-	bzero(elm_response, 1024); /**/
+	bzero(elm_response.raw, 1024); /**/
 	while (time(NULL) - start <= 4) {
 		ssize_t	rd_bytes;
 
@@ -43,6 +43,6 @@ int	elm_read_response(int fd)
 			break ;
 		}
 	}
-	memcpy(elm_response, buffer, total + 1); /**/
+	memcpy(elm_response.raw, buffer, total + 1); /**/
 	return (0);
 }

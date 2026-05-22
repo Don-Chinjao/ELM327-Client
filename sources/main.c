@@ -6,7 +6,7 @@
 /*   By: momadafun <marvin@42.fr>              YbodP  88oodP 8888Y"  .d8888   */
 /*                                                                            */
 /*   Created: 2026/05/16 17:25:41 by momadafun                                */
-/*   Updated: 2026/05/21 01:03:51 by momadafun                                */
+/*   Updated: 2026/05/21 23:06:09 by momadafun                                */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	loop(int fd)
 		if (elm_read_response(fd) == -1) {
 			return (-1);
 		}
-		print_raw(STDOUT_FILENO, elm_response);
+		print_raw(STDOUT_FILENO, elm_response.raw); /**/
 	}
 	return (0);
 }
