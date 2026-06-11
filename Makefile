@@ -6,7 +6,7 @@
 #    By: momadani <momadani@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/08 16:19:50 by momadani          #+#    #+#              #
-#    Updated: 2026/05/21 01:05:14 by momadafun                                 #
+#    Updated: 2026/06/01 22:11:53 by momadafun                                 #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,10 +65,10 @@ RESET					=	\e[0m
 NAME					:=	elm
 
 override FILES				:=	$(addsuffix .c,		\
+						main			\
 						elm_parser		\
 						elm_transport		\
-						split_response		\
-						main			)
+						split_response		)
 
 ### D I R E C T O R I E S ######################################################
 

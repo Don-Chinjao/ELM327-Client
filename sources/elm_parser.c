@@ -6,7 +6,7 @@
 /*   By: momadafun <marvin@42.fr>              YbodP  88oodP 8888Y"  .d8888   */
 /*                                                                            */
 /*   Created: 2026/05/16 22:21:23 by momadafun                                */
-/*   Updated: 2026/05/21 00:59:03 by momadafun                                */
+/*   Updated: 2026/06/11 02:28:34 by momadafun                                */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,12 @@ int	elm_extract_payload(char *dest, char const *src)
 {
 
 }
-
-int	elm_parser(char *response)
+*/
+int	elm_parser(t_elm_response *response)
 {
-
-}*/
+	response->lines = split_response(response->raw, "\n\r");
+	for (int i = 0; response->lines[i]; i++) {
+		printf("lines %d: %s\n", i, response->lines[i]);
+	}
+	return (0);
+}

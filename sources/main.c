@@ -6,13 +6,14 @@
 /*   By: momadafun <marvin@42.fr>              YbodP  88oodP 8888Y"  .d8888   */
 /*                                                                            */
 /*   Created: 2026/05/16 17:25:41 by momadafun                                */
-/*   Updated: 2026/05/21 23:06:09 by momadafun                                */
+/*   Updated: 2026/06/11 02:27:26 by momadafun                                */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "elm.h"
 
 //char	elm_response[1024];
+t_elm_response	elm_response;
 
 int	setup(char const *tty_path, int *fd, struct termios *tty)
 {
@@ -83,7 +84,8 @@ int	loop(int fd)
 		if (elm_read_response(fd) == -1) {
 			return (-1);
 		}
-		print_raw(STDOUT_FILENO, elm_response.raw); /**/
+		elm_parser(&elm_response);
+		//print_raw(STDOUT_FILENO, elm_response.raw); /**/
 	}
 	return (0);
 }
@@ -108,7 +110,7 @@ int	main(int ac, char **av)
 */
 	elm_send(fd, "ATE0\r");
 	elm_read_response(fd);
-	print_raw(STDOUT_FILENO, elm_response);
+	print_raw(STDOUT_FILENO, elm_response.raw);
 	loop(fd);
 	close(fd);
 

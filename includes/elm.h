@@ -25,7 +25,7 @@ extern t_elm_response	elm_response;
 typedef	struct s_elm_response
 {
 	char	raw[1024];
-	char	lines[256][1024];
+	char	**lines;
 }		t_elm_response;
 
 typedef	enum e_obd_error
@@ -52,7 +52,9 @@ typedef	struct s_obd_response
 	size_t	len;
 }		t_obd_response;
 
-char	**split_response(char *response, char *charset, char tokens[256][1024]);
+char	**split_response(char *response, char *charset);
+
+int	elm_parser(t_elm_response *response);
 
 int	elm_send(int fd, char const *cmd);
 int	elm_read_response(int fd);
